@@ -91,14 +91,6 @@ Every year, U.S. high school students take the SAT, a standardized exam with thr
 
 ---
 
-## How to Reproduce
-1. Place data/schools.csv in the data/ folder.
-2. Open nyc_schools_sat_score_case_study.ipynb in jupyter notebook. Go to view button and open in Jupyter Lab. on the left table content can be sees. 
-3. **Run all cells top-to-bottom.**
-4. See answers under sections **Q1–Q11**, including visualizations, insights, and recommendations.
-
----
-
 ## Skills Demonstrated
 - **Data wrangling**: Header normalization, type coercion, duplicate handling, and NA diagnostics.
 
@@ -118,14 +110,23 @@ Every year, U.S. high school students take the SAT, a standardized exam with thr
 ## Summary of Insights
 
 * **Distributions & center:** SAT scores are **right-skewed**; typical (median) subject scores sit in the **low–mid 400s** — **Math \~415**, **Reading \~413**, **Writing \~403**. Means are slightly higher than medians because a few top schools pull the right tail.
+  
 * **Variability:** **Math varies the most** across schools (widest IQR), while **Writing** is the lowest of the three subjects on average.
+  
 * **Top vs. bottom:** The **max–min school gap** is **\~1220 points** (2144–924), but the **typical spread** is much smaller (**IQR ≈ 170–214**, **p90–p10 ≈ 398–455**).
+  
 * **Participation matters, not the story:** Using a **strict view** (only schools with **percent\_tested ≥ 50%** and not missing) removes **\~28%** of below-median schools for low/unknown participation, yet **rankings and conclusions are essentially unchanged**; the unscreened view simply adds transparency with participation notes.
+  
 * **Below-median landscape:** Most below-median schools are **near (0–50 pts)** or **moderately (51–150)** below the city median; a **smaller tail (≥150)** drives the worst gaps.
+  
 * **Borough patterns:** **Staten Island** has the **highest** borough average; the **Bronx** the **lowest**. **Borough gaps are modest** (≈50–60 points) compared with **school-to-school** differences *within* boroughs. Dispersion is largest in **Manhattan/Staten Island** depending on view; **Brooklyn/Bronx** contain many below-median schools.
+  
 * **Size doesn’t predict performance:** The **number of schools** in a borough is **not correlated** with its average SAT.
+  
 * **Subject consistency by borough:** Borough rankings are **similar across math, reading, and writing** (high rank agreement), so strengths/weaknesses are **not** typically single-subject illusions.
+  
 * **Quartiles (Q1→Q4):** Median **total\_SAT** climbs by **\~+395 points** from bottom to top quartile; **participation rises** with performance. **Q1 over-indexes Bronx/Brooklyn**, **Q4** over-indexes **Manhattan/Queens/SI**.
+  
 * **Subject balance at school level:** Some schools are balanced across subjects; others have a **clear weakness in one area** (often writing). Quartiles reveal these patterns cleanly.
 
 ---
