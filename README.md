@@ -80,7 +80,7 @@ Every year, U.S. high school students take the SAT, a standardized exam with thr
 
 * **File** data/schools.csv
 * **Source:** Provided by DataCamp for educational purposes
-* **Description:** NYC high-school SAT dataset with school/borough identifiers, **average subject scores** — Math, Reading, Writing (**0–800** each) — and **percent\_tested** (**0–100**, share of students who took the SAT). The project also derives **total\_SAT** (sum of the three subjects, **0–2400**) and participation flags used in the analysis.
+* **Description:** NYC high-school SAT dataset with school/borough identifiers, **average subject scores** — Math, Reading, Writing (**0–800** each) — and **percent\_tested** (**0–100**, share of students who took the SAT). The project also derives **total\_SAT** (sum of the three subjects, **0–2400**) and **low_participation, pt_note, participation_ok** participation flags used in the analysis.
 
 ## Requirements
 
