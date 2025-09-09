@@ -31,12 +31,19 @@ Every year, U.S. high school students take the SAT, a standardized exam with thr
 ## Deliverables
 
 * **Answers to 11 research questions** on NYC high-school SAT performance, using both **strict** (participation ≥50% & known) and **unscreened** views where relevant.
+  
 * **School-level analysis:** distributions (hist/box), medians & IQR (with means for context), subject comparisons, **high-math (≥640)** list, **top-10 total SAT**, and **below-median** tiering (near/moderate/far-below).
+  
 * **Borough-level analysis:** rankings (highest/lowest), means/medians, **dispersion** (IQR/SD), **subject strengths**, and stability across screens.
+  
 * **Gap analysis:** **max–min** extremes plus **robust spread** (IQR, p90–p10) to contextualize outliers.
+  
 * **Quartile breakdowns (Q1–Q4):** profiles by total SAT, subject medians, participation, and borough mix.
+  
 * **Participation-aware reporting:** `percent_tested`, `low_participation`, and `pt_note` flags; transparency via unscreened tables.
+  
 * **Reproducible Jupyter notebook** with clean preprocessing (column normalization, type coercion, `total_SAT` build, NA handling), structured code, and commentary.
+  
 * **Actionable recommendations for stakeholders** highlighting strengths, gaps, and where to focus resources.
 ---
 
