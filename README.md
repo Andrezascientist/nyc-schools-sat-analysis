@@ -6,7 +6,7 @@
 
 **Notebook:** nyc_school_sat_score_case_study.ipynb
 
-**Goal:** Analyze NYC schools’ SAT scores to uncover subject-level and overall performance patterns. Provide clear, data-driven insights that can guide education policies and family school choices.
+Analyze NYC schools’ SAT scores to uncover subject-level and overall performance patterns. Provide clear, data-driven insights that can guide education policies and family school choices.
 
 ---
 ## Business Context
