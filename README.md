@@ -58,15 +58,21 @@ Every year, U.S. high school students take the SAT, a standardized exam with thr
 * **average\_math:** *(float, 0–800)* School’s average SAT Math score.
   
 * **average\_reading:** *(float, 0–800)* School’s average SAT Reading score.
+  
 * **average\_writing:** *(float, 0–800)* School’s average SAT Writing score.
+  
 * **percent\_tested:** *(float, 0–100)* Percent of enrolled students who took the SAT. May be **NaN** if not reported.
+  
 * **total\_SAT:** *(float, 0–2400)* Sum of **average\_math + average\_reading + average\_writing** (uses available values; **NaN** only if all three are missing).
+  
 * **low\_participation:** *(bool)* Flag for **SAT participation below threshold** — `percent_tested < PT` when reported. Use to identify possibly **unrepresentative** results (small tested cohort) and to **exclude** rows in strict analyses. *(PT=50 by default.)*
+  
 * **pt\_note:** *(string)* Participation status shown in **unscreened** tables (no rows dropped):
   * `""` → meets threshold (≥ PT)
   * `"⚠️ <PT% tested"` → below threshold
   * `"(percent_tested NA)"` → participation missing
     *(PT=50 by default.)*
+    
 * **participation\_ok:** *(bool)* `True` when `percent_tested` is **reported** and **≥ PT**; `False` otherwise. Used to include rows in the **strict (participation-aware)** view. *(PT=50 by default.)*
 ---
 
