@@ -50,9 +50,13 @@ Every year, U.S. high school students take the SAT, a standardized exam with thr
 ## Data Dictionary: NYC School SAT Performance Metrics
 
 * **school\_name:** *(string)* Name of the school.
+  
 * **borough:** *(string)* NYC borough the school is in.
+
 * **building\_code:** *(string)* NYC DOE building/school code.
+  
 * **average\_math:** *(float, 0–800)* School’s average SAT Math score.
+  
 * **average\_reading:** *(float, 0–800)* School’s average SAT Reading score.
 * **average\_writing:** *(float, 0–800)* School’s average SAT Writing score.
 * **percent\_tested:** *(float, 0–100)* Percent of enrolled students who took the SAT. May be **NaN** if not reported.
