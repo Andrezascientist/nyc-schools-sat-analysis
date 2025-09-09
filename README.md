@@ -79,9 +79,9 @@ Every year, U.S. high school students take the SAT, a standardized exam with thr
      *(If your file lives elsewhere, update `CSV_PATH` at the top of the notebook.)*
 2. **Open in JupyterLab (recommended)**
    * From the repo root, launch:
-     ```bash
+     
      jupyter lab
-     ```
+    
    * Open `nyc_schools_sat_score_case_study.ipynb`.
    * In JupyterLab, turn on the left **Table of Contents** via **View → Table of Contents**.
      *(Classic Jupyter Notebook doesn’t show this by default—use JupyterLab for the sidebar ToC.)*
@@ -89,8 +89,7 @@ Every year, U.S. high school students take the SAT, a standardized exam with thr
    * In the notebook, choose **Run → Run All Cells** (top to bottom).
 4. **Inspect results**
    * Answers to **Q1–Q11** (plots, tables, insights, recommendations) appear inline under each section.
-> Optional: if you need packages, install them first:
-> `pip install pandas numpy matplotlib` (or use your environment manager of choice).
+
 ---
 
 ## How to Reproduce
