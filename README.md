@@ -101,17 +101,17 @@ Every year, U.S. high school students take the SAT, a standardized exam with thr
 
 ## Skills Demonstrated
 
-- **Data wrangling**: schema standardization, coercion, missing analysis, type safety.
+- **Data wrangling**: Header normalization, type coercion, duplicate handling, and NA diagnostics.
 
-- **Feature Engineering:** Created a combined total_SAT metric and a subject_balance_std measure to evaluate cross-subject consistency at the school level.
+- **Feature Engineering:** Created a combined total_SAT metric and participation flags (low_participation, pt_note, participation_ok).
 
-* **Exploratory Data Analysis (EDA):** Generated descriptive statistics, identified top/bottom schools, measured borough averages, and compared quartiles.
+* **Exploratory Data Analysis (EDA):** Distributions, skew, outliers; borough comparisons; top/bottom schools; quartile breakdowns.
 
-* **Statistical Insights:** Used measures of central tendency and variability (mean, median, standard deviation) to highlight performance differences across schools and boroughs.
+* **Statistical Insights:** Applied central-tendency and variability metrics—mean, median, standard deviation, range, robust spread (IQR, p90–p10)—and Pearson/Spearman correlations to surface performance differences across schools and boroughs.
 
-* **Data Visualization** Produced histograms, boxplots, bar charts, scatter plots, and heatmaps.
+* **Data Visualization** Histograms/boxplots with median lines, ranked bars, scatter plots with annotations, and compact summary tables.
 
-* **Comparative Analysis:** Assessed borough-level rankings, school-level balance across subjects, and performance gaps between quartiles.
+* **Comparative & ranking work:** Assessed borough-level rankings, school-level balance across subjects, and performance gaps between quartiles.Top math (≥640), top-10 total SAT, below-median tiers, borough ranking (highest/lowest, dispersion), subject-rank consistency (Spearman ρ).
 
 * **Communication:** Structured the notebook into research questions with clear commentary, presented findings with tables/visuals, and translated results into actionable recommendations.
 ---
