@@ -10,7 +10,7 @@ Analyze NYC schools’ SAT scores to uncover subject-level and overall performan
 
 ---
 ## Business Context
-Every year, U.S. high school students take the SAT, a standardized exam with three sections—reading, math, and writing—each scored up to 800 points and crucial for college admissions. Analyzing school performance on these tests provides valuable insights for stakeholders including educators, policymakers, researchers, and families. In New York City, understanding SAT results across schools and boroughs helps identify excellence, gaps, and variability, enabling data-driven decisions on resource allocation, program design, and school selection while supporting efforts to improve college readiness.
+Every year, U.S. high school students take the SAT, a standardized exam with three sections:reading, math, and writing; each scored up to 800 points and crucial for college admissions. Analyzing school performance on these tests provides valuable insights for stakeholders including educators, policymakers, researchers, and families. In New York City, understanding SAT results across schools and boroughs helps identify excellence, gaps, and variability, enabling data-driven decisions on resource allocation, program design, and school selection while supporting efforts to improve college readiness.
 
 ---
 
