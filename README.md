@@ -100,7 +100,6 @@ Every year, U.S. high school students take the SAT, a standardized exam with thr
 ---
 
 ## Skills Demonstrated
-
 - **Data wrangling**: Header normalization, type coercion, duplicate handling, and NA diagnostics.
 
 - **Feature Engineering:** Created a combined total_SAT metric and participation flags (low_participation, pt_note, participation_ok).
@@ -111,9 +110,9 @@ Every year, U.S. high school students take the SAT, a standardized exam with thr
 
 * **Data Visualization** Histograms/boxplots with median lines, ranked bars, scatter plots with annotations, and compact summary tables.
 
-* **Comparative & ranking work:** Assessed borough-level rankings, school-level balance across subjects, and performance gaps between quartiles.Top math (≥640), top-10 total SAT, below-median tiers, borough ranking (highest/lowest, dispersion), subject-rank consistency (Spearman ρ).
+* **Comparative & ranking work:** Ranked boroughs (highest/lowest, dispersion), identified top math (≥640) and top-10 total SAT schools, tiered below-median schools, measured quartile gaps, evaluated school-level subject balance, and checked rank consistency across subjects (Spearman ρ).
 
-* **Communication:** Structured the notebook into research questions with clear commentary, presented findings with tables/visuals, and translated results into actionable recommendations.
+* **Communication & reproducibility:** Per-question insights + “why this matters,” data dictionary, participation rules, and a reproducible JupyterLab notebook with clear structure.
 ---
 
 ## Summary of Insights
@@ -131,28 +130,24 @@ Every year, U.S. high school students take the SAT, a standardized exam with thr
 
 ---
 
+## Recommendations for Stakeholders
 
-## Summary of Insights
+**For policymakers**
+* Prioritize **school-level** supports where need is densest (especially **Bronx/Brooklyn**).
+* Use the **strict view** (percent\_tested ≥ 50%) for reporting; publish an unscreened appendix for transparency.
+* Set goals around **median/IQR** and **quartile mobility** (Q1→Q2→Q3→Q4), not just top-10 lists.
 
-* Score distributions show wide variability across schools, with Math often having the lowest averages.
+**For educators**
+* Lift **writing** (lowest median) and manage **math variability** with coherent pathways + targeted tutoring.
+* Borrow **portable practices** from exemplars (course sequencing, extended time, tutoring/club models).
+* Plan supports by **gap-to-median tiers** (near/moderate/far-below) and track movement up tiers.
 
-* A small group of schools consistently achieves exceptional results, while many fall below the city median.
+**For researchers**
+* Study drivers of **within-borough spread** and **participation** (socio-economic factors, program access).
+* Assess the impact of **screened/specialized** models using matched comparisons.
+* Quantify which interventions (tutoring dosage, scheduling, coursework) move schools across quartiles.
 
-* Boroughs differ not only in average SAT scores but also in consistency—some have tight clusters while others show large disparities.
-
-* Quartile analysis reveals clear gaps: top schools outperform bottom schools significantly in all subjects.
-
-* Subject balance varies: some schools maintain consistent performance across Math, Reading, and Writing, while others show clear weaknesses in one subject.
-
----
-
-## Recommendations for Stakeholders:
-
-* **For policymakers:** Target resources to boroughs and schools with higher variability and subject imbalances.
-
-* **For educators:** Share best practices from top-performing schools to raise performance city-wide.
-
-* **For researchers:** Explore socio-economic and demographic drivers behind borough-level differences.
-
-* **For parents/students:** Use quartile and borough rankings to better understand school performance and college readiness opportunities.
-
+**For parents/students**
+* Compare schools using **median/IQR** and **participation %** (strict view), not just averages.
+* Check **subject balance** (math vs. reading/writing) and a school’s **quartile** within its borough.
+* Favor schools showing **consistent improvement** (quartile movement), not only headline ranks.
