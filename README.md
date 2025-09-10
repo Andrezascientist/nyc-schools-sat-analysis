@@ -51,24 +51,26 @@ Every year, U.S. high school students take the SAT, a standardized exam with thr
 
 * **File** data/schools.csv
 * **Source:** DataCamp for educational purposes
-* **Description:** NYC high-school SAT dataset with school/borough identifiers, **average subject scores** — Math, Reading, Writing (**0–800** each) — and **percent\_tested** (**0–100**). The project derives **total\_SAT** (sum of the three subjects, **0–2400**) and the participation flags **low_participation, pt_note** and **participation_ok** used in the analysis.
+* **Description:** NYC high-school SAT dataset with school/borough identifiers, **average subject scores** — Math, Reading, Writing (**0–800** each) — and **percent\_tested** (**0–100**), share of students who took the SAT. The project derives **total\_SAT** (sum of the three subjects, **0–2400**) and the participation flags **low_participation, pt_note** and **participation_ok** used  for “strict vs. unscreened” analyses.
 ---
 
 ## Data Dictionary: NYC School SAT Performance Metrics
 
-* **school\_name:** *(string)* Name of the school.
+* **school\_name:** *(string)* School name.
   
-* **borough:** *(string)* NYC borough the school is i.
+* **borough:** *(string)* NYC borough.
 
 * **building\_code:** *(string)* NYC DOE building/school code.
   
-* **average\_math:** *(float, 0–800)* School’s average SAT Math score.
+* **average\_math:** *(float, 0–800)* Average SAT Math score.
   
-* **average\_reading:** *(float, 0–800)* School’s average SAT Reading score.
+* **average\_reading:** *(float, 0–800)* Average SAT Reading score.
   
-* **average\_writing:** *(float, 0–800)* School’s average SAT Writing score.
+* **average\_writing:** *(float, 0–800)* Average SAT Writing score.
   
-* **percent\_tested:** *(float, 0–100)* Percent of enrolled students who took the SAT. May be **NaN** if not reported.
+* **percent\_tested:** *(float, 0–100)* Percent of enrolled students who took the SAT; may be **NaN** if not reported.
+
+**Derived in notebook**
   
 * **total\_SAT:** *(float, 0–2400)* Sum of **average\_math + average\_reading + average\_writing** (uses available values; **NaN** only if all three are missing).
   
