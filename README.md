@@ -47,6 +47,13 @@ Every year, U.S. high school students take the SAT, a standardized exam with thr
 * **Actionable recommendations** highlighting strengths, gaps, and where to focus resources.
 ---
 
+## Dataset
+
+* **File** data/schools.csv
+* **Source:** DataCamp for educational purposes
+* **Description:** NYC high-school SAT dataset with school/borough identifiers, **average subject scores** — Math, Reading, Writing (**0–800** each) — and **percent\_tested** (**0–100**). The project derives **total\_SAT** (sum of the three subjects, **0–2400**) and the participation flags **low_participation, pt_note** and **participation_ok** used in the analysis.
+---
+
 ## Data Dictionary: NYC School SAT Performance Metrics
 
 * **school\_name:** *(string)* Name of the school.
@@ -76,13 +83,6 @@ Every year, U.S. high school students take the SAT, a standardized exam with thr
 * **participation\_ok:** *(bool)* `True` when `percent_tested` is **reported** and **≥ PT**; `False` otherwise. Used to include rows in the **strict (participation-aware)** view. *(PT=50 by default.)*
 ---
 
-## Dataset
-
-* **File** data/schools.csv
-* **Source:** DataCamp for educational purposes
-* **Description:** NYC high-school SAT dataset with school/borough identifiers, **average subject scores** — Math, Reading, Writing (**0–800** each) — and **percent\_tested** (**0–100**). The project derives **total\_SAT** (sum of the three subjects, **0–2400**) and the participation flags **low_participation, pt_note** and **participation_ok** used in the analysis.
----
-
 ## Requirements
 
 * Python 3.12.7
@@ -91,23 +91,38 @@ Every year, U.S. high school students take the SAT, a standardized exam with thr
 
 ## How to Reproduce
 
-1. **Get the data**
-   * Place `data/schools.csv` in the repo’s `data/` folder.
-     *(If your file lives elsewhere, update `CSV_PATH` at the top of the notebook.)*
-2. **Open in JupyterLab (recommended)**
-   * From the repo root, launch:
-     
-     jupyter lab
-    
-   * Open `nyc_schools_sat_score_case_study.ipynb`.
-   * In JupyterLab, enable the left **Table of Contents** via **View → Table of Contents**.
-     *(Classic Jupyter Notebook doesn’t show this sidebar by default.)*
-3. **Run the analysis**
-   * In the notebook, choose **Run → Run All Cells** (top to bottom).
-4. **Inspect results**
-   * Answers to **Q1–Q11** (plots, tables, insights, recommendations) appear inline under each section.
+### Option A — JupyterLab (recommended)
 
+1. **Get the data:** place `data/schools.csv` in the repo’s `data/` folder.
+   *(If your file lives elsewhere, update `CSV_PATH` at the top of the notebook.)*
+2. **Launch JupyterLab** from the repo root:
+
+
+   ```bash
+   jupyter lab
+   ```
+
+   
+3. **Open** `nyc_schools_sat_score_case_study.ipynb`.
+4. In JupyterLab, enable the left **Table of Contents** via **View → Table of Contents**.
+5. **Run the analysis:** **Run → Run All Cells** (top to bottom).
+6. **Inspect results:** Answers to **Q1–Q11** (plots, tables, insights, recommendations) appear under each section.
+
+### Option B — Start in Classic Notebook, then switch to JupyterLab
+
+1. Launch Classic Notebook:
+
+
+   ```bash
+   jupyter notebook
+   ```
+   
+2. Open `nyc_schools_sat_score_case_study.ipynb`.
+3. In the top menu, choose **View → Open in JupyterLab** to switch.
+   *(This opens the same notebook in JupyterLab so you can use the sidebar Table of Contents.)*
+4. Then follow steps **4–6** from **Option A**. 
 ---
+
 
 ## Skills Demonstrated
 - **Data wrangling**: Header normalization, type coercion, duplicate handling, and NA diagnostics.
