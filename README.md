@@ -1,4 +1,6 @@
 <img width="400" height="300" alt="schoolbus" src="https://github.com/user-attachments/assets/18d86098-2ed8-4dd9-96be-913a94ce94aa" />
+
+
 # NYC Schools SAT – Exploratory Case Study
 
 **Author:** Andreza Eufrasio
