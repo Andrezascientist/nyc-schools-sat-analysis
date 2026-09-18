@@ -1,13 +1,14 @@
+# NYC Schools SAT – Exploratory Case Study
+
+
 <img width="400" height="300" alt="schoolbus" src="https://github.com/user-attachments/assets/18d86098-2ed8-4dd9-96be-913a94ce94aa" />
 
-
-# NYC Schools SAT – Exploratory Case Study
 
 **Author:** Andreza Eufrasio
 
 **Stack:** Python, pandas, numpy, matplotlib. SciPy
 
-**Notebook:** nyc_school_sat_score_case_study.ipynb
+**Notebook:** [nyc_school_sat_score_case_study.ipynb](nyc_school_sat_score_case_study.ipynb)
 
 Analyze NYC schools’ SAT scores to uncover subject-level and overall performance patterns and provide clear, data-driven insights that can guide education policiy and family school choice.
 
