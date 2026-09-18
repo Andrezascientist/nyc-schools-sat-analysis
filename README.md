@@ -6,55 +6,45 @@
 
 **Author:** Andreza Eufrasio
 
-**Stack:** Python, pandas, numpy, matplotlib. SciPy
+**Stack:** Python, pandas, numpy, matplotlib, SciPy
 
 **Notebook:** [nyc_school_sat_score_case_study.ipynb](nyc_school_sat_score_case_study.ipynb)
 
-Analyze NYC schools’ SAT scores to uncover subject-level and overall performance patterns and provide clear, data-driven insights that can guide education policiy and family school choice.
+Analysis of NYC high school SAT scores to identify subject-level and overall performance patterns across schools and boroughs.
 
 ---
+
 ## Business Context
-Every year, U.S. high school students take the SAT, a standardized exam with three sections:reading, math, and writing; each scored up to 800 points. Analyzing school performance on these tests helps educators, policymakers, researchers, and families indetify excellences, gaps, and variability. In New York City, understanding SAT results across schools and boroughs supports data-driven decisions on resource allocation, program design, and school selection while advancing college-readiness efforts.
+
+Every year, U.S. high school students take the SAT, a standardized exam with three sections: reading, math, and writing, each scored up to 800 points.
+
+This project explores SAT performance across New York City public schools to identify differences among schools and boroughs, examine subject-level patterns, and investigate participation and score variability.
 
 ---
 
 ## Key Questions:
+
 1. What is the distribution of scores across math, reading, and writing?
 2. How do average scores compare across subjects?
 3. Which NYC schools have the best math results? (≥ 640 / 800)
 4. What are the top 10 performing schools based on combined SAT scores?
 5. Which schools fall below NYC’s median SAT performance?
-6. What is the performance gap between the highest and lowest schools?
+6. What is the performance gap between the highest- and lowest-performing schools?
 7. Which boroughs have the highest and lowest average SAT scores?
-8. Which single borough has the largest standard deviation in combined SAT scores? 
-9. Is there a relationship between number of schools in a borough and its average SAT?
-10. Do boroughs show consistent subject strengths (math vs reading vs writing)?
-11. If we rank schools into quartiles by total SAT, what characteristics do top-quartile schools share vs bottom-quartile schools?
----
+8. Which borough has the largest variation in combined SAT scores?
+9. Is there a relationship between number of schools in a borough and its average SAT score?
+10. Do boroughs show consistent performance across math, reading, and writing?
+11. Which schools fall into the lowest SAT quartile, and what characteristics distinguish them?
 
-## Deliverables
-
-* **Answers to 11 research questions** on NYC high-school SAT performance, using both **strict** (participation ≥50% & known) and **unscreened** views where relevant.
-  
-* **School-level analysis:** distributions (hist/box), medians & IQR (with means for context), subject comparisons, **high-math (≥640)** list, **top-10 total SAT**, and **below-median** tiering (near/moderate/far-below).
-  
-* **Borough-level analysis:** rankings (highest/lowest), means/medians, **dispersion** (IQR/SD), **subject strengths**, and stability across screens.
-  
-* **Gap analysis:** **max–min** extremes plus **robust spread** (IQR, p90–p10) to contextualize outliers.
-  
-* **Quartile breakdowns (Q1–Q4):** profiles by total SAT, subject medians, participation, and borough mix.
-  
-* **Participation-aware reporting:** `percent_tested`, `low_participation`, and `pt_note` flags; transparency via unscreened tables.
-  
-* **Reproducible Jupyter notebook** with clean preprocessing (column normalization, type coercion, `total_SAT` build, NA handling), structured code, and commentary.
-  
-* **Actionable recommendations** highlighting strengths, gaps, and where to focus resources.
 ---
 
 ## Dataset
 
 * **File** data/schools.csv
-* **Source:** DataCamp for educational purposes
+* **Source:** DataCamp for educational dataset
+
+The dataset contains NYC high school SAT results, including:
+
 * **Description:** NYC high-school SAT dataset with school/borough identifiers, **average subject scores** — Math, Reading, Writing (**0–800** each) — and **percent\_tested** (**0–100**), share of students who took the SAT. The project derives **total\_SAT** (sum of the three subjects, **0–2400**) and the participation flags **low_participation, pt_note** and **participation_ok** used  for “strict vs. unscreened” analyses.
 ---
 
@@ -126,24 +116,8 @@ Every year, U.S. high school students take the SAT, a standardized exam with thr
 2. Open `nyc_schools_sat_score_case_study.ipynb`.
 3. In the top menu, choose **View → Open in JupyterLab** to switch.
    *(This opens the same notebook in JupyterLab so you can use the sidebar Table of Contents.)*
-4. Then follow steps **4–6** from **Option A**. 
----
-
-
-## Skills Demonstrated
-- **Data wrangling**: Header normalization, type coercion, duplicate handling, and NA diagnostics.
-
-- **Feature Engineering:** Build **total_SAT** and participation flags (**low_participation, pt_note, participation_o**).
-
-* **Exploratory Data Analysis (EDA):** Distributions, skew, outliers; borough comparisons; top/bottom schools; quartile breakdowns.
-
-* **Statistical Insights:** Central-tendency and variability metrics: mean, median, standard deviation, range, robust spread (IQR, p90–p10) and Pearson/Spearman correlations.
-
-* **Data Visualization** Histograms/boxplots with median lines, ranked bars, scatter plots, and ompact summary tables.
-
-* **Comparative & ranking work:** Boroughs ranking (highest/lowest, dispersion), top math (≥640) and top-10 total SAT list, below-median tiering, quartile gaps, subject-rank consistency (Spearman ρ).
-
-* **Communication & reproducibility:** Per-question insights and “why this matters,” data dictionary, participation rules, and a clean, reproducible JupyterLab notebook.
+4. Then follow steps **4–6** from **Option A**.
+   
 ---
 
 ## Summary of Insights
