@@ -45,7 +45,11 @@ This project explores SAT performance across New York City public schools to ide
 
 The dataset contains NYC high school SAT results, including:
 
-* **Description:** NYC high-school SAT dataset with school/borough identifiers, **average subject scores** — Math, Reading, Writing (**0–800** each) — and **percent\_tested** (**0–100**), share of students who took the SAT. The project derives **total\_SAT** (sum of the three subjects, **0–2400**) and the participation flags **low_participation, pt_note** and **participation_ok** used  for “strict vs. unscreened” analyses.
+* **Description:** NYC high-school SAT dataset with school/borough identifiers
+* **average subject scores** — Math, Reading, Writing (**0–800** each) 
+* **percent\_tested** (**0–100**), share of students who took the SAT
+* The project derives **total\_SAT** (sum of the three subjects, **0–2400**) and the participation flags **low_participation, pt_note** and **participation_ok** used  for “strict vs. unscreened” analyses.
+  
 ---
 
 ## Data Dictionary: NYC School SAT Performance Metrics
@@ -77,90 +81,73 @@ The dataset contains NYC high school SAT results, including:
     *(PT=50 by default.)*
     
 * **participation\_ok:** *(bool)* `True` when `percent_tested` is **reported** and **≥ PT**; `False` otherwise. Used to include rows in the **strict (participation-aware)** view. *(PT=50 by default.)*
+  
 ---
 
-## Requirements
+## Analysis
 
-* Python 3.12.7
-* pip install -r requirements.txt
----
+The project includes:
 
-## How to Reproduce
+- Data cleaning and validation
+- Feature engineering for total SAT scores and participation categories
+- Exploratory analysis of score distributions and variability
+- School-level performance comparisons
+- Borough-level comparisons
+- Top- and bottom-performing school analysis
+- Quartile analysis
+- SAT participation analysis
+- Correlation and rank-consistency analysis
 
-### Option A — JupyterLab (recommended)
-
-1. **Get the data:** place `data/schools.csv` in the repo’s `data/` folder.
-   *(If your file lives elsewhere, update `CSV_PATH` at the top of the notebook.)*
-2. **Launch JupyterLab** from the repo root:
-
-
-   ```bash
-   jupyter lab
-   ```
-
-   
-3. **Open** `nyc_schools_sat_score_case_study.ipynb`.
-4. In JupyterLab, enable the left **Table of Contents** via **View → Table of Contents**.
-5. **Run the analysis:** **Run → Run All Cells** (top to bottom).
-6. **Inspect results:** Answers to **Q1–Q11** (plots, tables, insights, recommendations) appear under each section.
-
-### Option B — Start in Classic Notebook, then switch to JupyterLab
-
-1. Launch Classic Notebook:
-
-
-   ```bash
-   jupyter notebook
-   ```
-   
-2. Open `nyc_schools_sat_score_case_study.ipynb`.
-3. In the top menu, choose **View → Open in JupyterLab** to switch.
-   *(This opens the same notebook in JupyterLab so you can use the sidebar Table of Contents.)*
-4. Then follow steps **4–6** from **Option A**.
-   
 ---
 
 ## Summary of Insights
 
-* **Distributions & center:** SAT scores are **right-skewed**; typical (median) subject scores sit in the **low–mid 400s** — **Math \~415**, **Reading \~413**, **Writing \~403**. Means are slightly higher than medians because a few top schools pull the right tail.
-  
-* **Variability:** **Math varies the most** across schools (widest IQR); **Writing** is the lowest on average.
-  
-* **Top vs. bottom:** The **max–min gap** across schools is **\~1220 points** (2144–924), but the **typical spread** is much smaller (**IQR ≈ 170–214**, **p90–p10 ≈ 398–455**).
-  
-* **Participation matters, not the story:** A **strict view** (**percent\_tested ≥ 50%** & not missing) removes **\~28%** of below-median schools, yet conclusions and rankings are **stable**; unscreened adds participation context.
-  
-* **Below-median landscape:** Most schools are **near (0–50 pts)** or **moderately (51–150)** below the median; a **smaller tail (≥150)** drives the worst gaps.
-  
-* **Borough patterns:** **Staten Island** has the **highest** borough average; the **Bronx** the **lowest**. **Borough gaps are modest** (≈50–60 points) vs **within-borough** schools differences. Dispersion is largest in **Manhattan/Staten Island** (by view); **Brooklyn/Bronx** house many below-median schools.
-  
-* **Size ≠ performance:** The **number of schools** in a borough is **not correlated** with its average SAT.
-  
-* **Subject consistency:** Borough ranks are **similar across math, reading, and writing** (high rank agreement).
-  
-* **Quartiles (Q1→Q4):** Median **total\_SAT** climbs by **\~+395 points** bottom to top; **participation rises** with performance. **Q1** over-indexes **Bronx/Brooklyn**, **Q4** over-indexes **Manhattan/Queens/SI**.
-  
-* **Subject balance (school level):** Some schools are balanced across subjects; others have a **clear single-subject weakness** (often writing). 
+- **Score distribution:** SAT scores are right-skewed, with typical subject scores in the low-to-mid 400s.
+
+- **Subject performance:** Math shows the greatest variability across schools, while writing has the lowest average score.
+
+- **Performance gap:** A substantial gap exists between the highest- and lowest-performing schools, although most schools are much closer to the citywide median.
+
+- **Participation:** SAT participation varies across schools, but applying a stricter participation threshold does not substantially change the overall performance patterns.
+
+- **Borough patterns:** Staten Island has the highest average SAT performance and the Bronx the lowest. Differences among schools within the same borough are larger than the differences between borough averages.
+
+- **Borough size:** The number of schools in a borough is not correlated with its average SAT performance.
+
+- **Subject consistency:** Borough rankings are similar across math, reading, and writing.
+
+- **Subject balance:** Some schools perform consistently across subjects, while others show a clear weakness in one subject, most often writing.
+
 ---
 
-## Recommendations for Stakeholders
+## Requirements
 
-**For policymakers**
-* Prioritize **school-level** supports where need is densest (especially **Bronx/Brooklyn**).
-* Use the **strict view** for reporting; publish an unscreened appendix for transparency.
-* Set goals around **median/IQR** and **quartile mobility** (Q1→Q2→Q3→Q4).
+- Python 3.12.7
+- Dependencies listed in `requirements.txt`
 
-**For educators**
-* Lift **writing** (lowest median) and manage **math variability** via coherent pathways and targeted tutoring.
-* Borrow **portable practices** from exemplars (course sequencing, extended time, tutoring/club models).
-* Plan supports by **gap-to-median tiers** (near/moderate/far-below) and track movement up tiers.
+Install the required packages with:
 
-**For researchers**
-* Study drivers of **within-borough spread** and **participation** (socio-economic factors, program access).
-* Evaluate the impact of **screened/specialized** models using matched comparisons.
-* Quantify which interventions move schools across quartiles.
+```bash
+pip install -r requirements.txt
+```
 
-**For parents/students**
-* Compare schools using **median/IQR** and **participation %** (strict view), not just averages.
-* Check **subject balance** and a school’s **quartile** within its borough.
-* Favor schools showing **consistent improvement** (quartile movement), not only headline ranks.
+---
+
+## How to Reproduce
+
+1. Clone or download this repository.
+2. Make sure `schools.csv` is located in the `data/` folder.
+3. Install the required dependencies:
+
+```bash
+pip install -r requirements.txt
+```
+
+4. Launch JupyterLab:
+
+```bash
+jupyter lab
+```
+
+5. Open `nyc_school_sat_score_case_study.ipynb`.
+6. Run the notebook from top to bottom.
