@@ -6,7 +6,7 @@
 
 **Author:** Andreza Eufrasio
 
-**Stack:** Python, pandas, numpy, matplotlib, iPython, sciPy
+**Stack:** python, pandas, numpy, matplotlib, iPython, sciPy
 
 **Notebook:** [nyc_school_sat_score_case_study.ipynb](nyc_school_sat_score_case_study.ipynb)
 
